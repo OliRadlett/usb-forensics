@@ -4,23 +4,22 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.Versioning;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Work_Mentoring_Project
 {
+    [SupportedOSPlatform("windows")]
     internal class UsbEnumerationScanner
     {
         public UsbEnumerationScanner()
         {
             List<IRegistryValues> devices = Scan();
-            foreach (RegistryValues device in devices)
-            {
-                device.Print();
-            }
+            Print(devices);
         }
 
-        public List<IRegistryValues> Scan()
+        public static List<IRegistryValues> Scan()
         {
             var key = Registry.LocalMachine;
             var systemKey = key.OpenSubKey(@"System\CurrentControlSet\Enum\USB");
@@ -41,6 +40,14 @@ namespace Work_Mentoring_Project
                 }
             }
             return devices;
+        }
+
+        public static void Print(List<IRegistryValues> devices)
+        {
+            foreach (RegistryValues device in devices)
+            {
+                device.Print();
+            }
         }
     }
 }

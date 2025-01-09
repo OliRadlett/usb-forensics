@@ -8,7 +8,6 @@ namespace USBForensics
 {
     internal class Program
     {
-        [SupportedOSPlatform("windows")]
         static void Main(string[] args)
         {
             UsbEnumerationScanner scanner = new UsbEnumerationScanner();
