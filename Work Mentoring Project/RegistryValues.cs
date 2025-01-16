@@ -43,7 +43,7 @@ namespace Work_Mentoring_Project
         private (string, string, string) ExtractFromHardwareID(string HardwareID)
         {
             string VIDPattern = @"(?<=VID)\w*(?=&)";
-            string PIDPattern = @"(?<=VID)\w*(?=&)";
+            string PIDPattern = @"(?<=PID)\w*(?=&)";
             string RevIDPattern = @"(?<=REV)\w*(?=&)";
 
             // Add trailing & to make regex easier
