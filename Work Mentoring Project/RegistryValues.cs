@@ -16,7 +16,10 @@ namespace Work_Mentoring_Project
             DeviceInstanceID = deviceInstanceId;
             ContainerID = containerId;
             HardwareID = hardwareId;
-            (VID, PID, RevID) = ExtractFromHardwareID(hardwareId);
+            VID = ExtractVIDFromHardwareID(hardwareId);
+            PID = ExtractPIDFromHardwareID(hardwareId);
+            REV = ExtractREVFromHardwareID(hardwareId);
+            MI = ExtractMIFromHardwareID(hardwareId);
         }
 
         public string DeviceTypeID { get; }
@@ -25,7 +28,8 @@ namespace Work_Mentoring_Project
         public string HardwareID { get; }
         public string VID { get; }
         public string PID { get; }
-        public string RevID { get; }
+        public string REV { get; }
+        public string MI { get; }
 
 
         public void Print()
@@ -36,30 +40,57 @@ namespace Work_Mentoring_Project
             Console.WriteLine($"ContainerID: {ContainerID}");
             Console.WriteLine($"HardwareID: {HardwareID}");
             Console.WriteLine($"Version ID: {VID}");
-            Console.WriteLine($"PID: {PID}");
-            Console.WriteLine($"Revision ID: {RevID}");
+            Console.WriteLine($"Product ID: {PID}");
+            Console.WriteLine($"Revision: {REV}");
+            Console.WriteLine($"MI: {MI}");
         }
 
-        private (string, string, string) ExtractFromHardwareID(string HardwareID)
+        private string ExtractVIDFromHardwareID(string HardwareID)
         {
-            string VIDPattern = @"(?<=VID)\w*(?=&)";
-            string PIDPattern = @"(?<=PID)\w*(?=&)";
-            string RevIDPattern = @"(?<=REV)\w*(?=&)";
-
-            // Add trailing & to make regex easier
-            if (!HardwareID.EndsWith("&"))
+            string VIDPattern = @"VID(_)?(?<vendorId>[0-9A-F]{4})";
+            var match = Regex.Match( HardwareID, VIDPattern );
+            
+            if (match.Success)
             {
-                HardwareID = HardwareID += "&";
+                return match.Groups["vendorId"].Value;
             }
+            return null;
+        }
 
-            // Remove all underscores
-            HardwareID = HardwareID.Replace("_", "");
+        private string ExtractPIDFromHardwareID(string HardwareID)
+        {
+            string PIDPattern = @"PID(_)?(?<productId>[0-9A-F]{4})";
+            var match = Regex.Match(HardwareID, PIDPattern);
 
-            string VID = Regex.Match( HardwareID, VIDPattern ).Value;
-            string PID = Regex.Match( HardwareID, PIDPattern ).Value;
-            string RevID = Regex.Match( HardwareID, RevIDPattern ).Value;
+            if (match.Success)
+            {
+                return match.Groups["productId"].Value;
+            }
+            return null;
+        }
 
-            return (VID, PID, RevID);
+        private string ExtractREVFromHardwareID(string HardwareID)
+        {
+            string REVPattern = @"REV(_)?(?<revision>[0-9A-F]{4})";
+            var match = Regex.Match(HardwareID, REVPattern);
+
+            if (match.Success)
+            {
+                return match.Groups["revision"].Value;
+            }
+            return null;
+        }
+
+        private string ExtractMIFromHardwareID(string HardwareID)
+        {
+            string MIPattern = @"MI(_)?(?<interfaceId>[0-9A-F]{2})";
+            var match = Regex.Match(HardwareID, MIPattern);
+
+            if (match.Success)
+            {
+                return match.Groups["interfaceId"].Value;
+            }
+            return null;
         }
 
     }
