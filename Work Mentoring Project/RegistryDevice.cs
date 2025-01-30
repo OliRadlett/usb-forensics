@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿using System.Text.RegularExpressions;
 
 namespace Work_Mentoring_Project
 {
-    internal class RegistryValues: IRegistryValues
+    internal class RegistryDevice: IRegistryDevice
     {
-        public RegistryValues(string deviceTypeId, string deviceInstanceId, string containerId, string hardwareId)
+        public RegistryDevice(string deviceTypeId, string deviceInstanceId, string containerId, string hardwareId)
         {
             DeviceTypeID = deviceTypeId;
             DeviceInstanceID = deviceInstanceId;

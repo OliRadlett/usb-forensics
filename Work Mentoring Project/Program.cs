@@ -1,8 +1,4 @@
-﻿using Microsoft.Win32;
-using System.Drawing;
-using System.Runtime.Versioning;
-using Pastel;
-using Work_Mentoring_Project;
+﻿using Work_Mentoring_Project;
 
 namespace USBForensics
 {
