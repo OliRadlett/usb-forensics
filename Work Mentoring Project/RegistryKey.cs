@@ -15,7 +15,7 @@ namespace Work_Mentoring_Project
 
         public string Name {  get { return _key.Name; } }
 
-        public string[] GetSubkeyNames()
+        public string[] GetSubKeyNames()
         {
             return _key.GetSubKeyNames();
         }

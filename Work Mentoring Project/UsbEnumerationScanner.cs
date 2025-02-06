@@ -16,8 +16,8 @@ namespace Work_Mentoring_Project
 
         public static List<IRegistryDevice> Scan()
         {
-            var key = Registry.LocalMachine;
-            var systemKey = key.OpenSubKey(@"System\CurrentControlSet\Enum\USB");
+            IRegistryRoot root = new RegistryRoot();
+            var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
 
             List<IRegistryDevice> devices = new List<IRegistryDevice>();
 
@@ -28,10 +28,10 @@ namespace Work_Mentoring_Project
                 foreach (var device in itemKey.GetSubKeyNames())
                 {
                     var deviceKey = itemKey.OpenSubKey(device);
-                    var containerId = (string) deviceKey.GetValue("ContainerID");
-                    string[] hardwareId = (string[])deviceKey.GetValue("HardwareID");
+                    var containerId = deviceKey.GetValue("ContainerID");
+                    string hardwareId = deviceKey.GetValue("HardwareID");
 
-                    devices.Add(new RegistryDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId[0]));
+                    devices.Add(new RegistryDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId));
                 }
             }
             return devices;

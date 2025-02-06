@@ -3,7 +3,7 @@
     internal interface IRegistryKey
     {
         string Name { get; }
-        string[] GetSubkeyNames();
+        string[] GetSubKeyNames();
         IRegistryKey OpenSubKey(string name);
         string GetValue(string valueName);
     }
