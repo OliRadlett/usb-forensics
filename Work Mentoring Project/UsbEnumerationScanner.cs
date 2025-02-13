@@ -1,20 +1,13 @@
-﻿using Microsoft.Win32;
-using Pastel;
+﻿using Pastel;
 using System.Drawing;
 using System.Runtime.Versioning;
 
 namespace Work_Mentoring_Project
 {
-    [SupportedOSPlatform("windows")]
     internal class UsbEnumerationScanner
     {
-        public UsbEnumerationScanner()
-        {
-            List<IRegistryDevice> devices = Scan();
-            Print(devices);
-        }
 
-        public static List<IRegistryDevice> Scan()
+        public List<IRegistryDevice> Scan()
         {
             IRegistryRoot root = new RegistryRoot();
             var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
@@ -37,7 +30,7 @@ namespace Work_Mentoring_Project
             return devices;
         }
 
-        public static void Print(List<IRegistryDevice> devices)
+        public void Print(List<IRegistryDevice> devices)
         {
             foreach (RegistryDevice device in devices)
             {

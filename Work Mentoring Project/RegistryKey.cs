@@ -1,4 +1,8 @@
-﻿using System.Runtime.Versioning;
+﻿using Microsoft.Win32;
+using Pastel;
+using System.Drawing;
+using System.Runtime.Versioning;
+using System.Security;
 
 namespace Work_Mentoring_Project
 {
@@ -22,12 +26,34 @@ namespace Work_Mentoring_Project
 
         public string GetValue(string valueName)
         {
-            return (string)_key.GetValue(valueName);
+            var kind = _key.GetValueKind(valueName);
+
+            switch (kind)
+            {
+                case RegistryValueKind.String:
+                    return _key.GetValue(valueName).ToString();
+                case RegistryValueKind.MultiString:
+                    return String.Join(", ", _key.GetValue(valueName));
+                default:
+                    Console.WriteLine($"Warning unsupported RegistryValueKind ({kind})".Pastel(Color.Yellow));
+                    return _key.GetValue(valueName).ToString();
+            }
         }
 
         public IRegistryKey OpenSubKey(string name)
         {
-            return new RegistryKey(_key.OpenSubKey(name));
+            if (_key.GetSubKeyNames().Contains(name))
+            {
+                try
+                {
+                    return new RegistryKey(_key.OpenSubKey(name));
+                }
+                catch (SecurityException)
+                {
+                    return null;
+                }
+            }
+            return null;
         }
     }
 }
