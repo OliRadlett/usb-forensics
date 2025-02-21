@@ -1,9 +1,10 @@
 ﻿namespace Work_Mentoring_Project
 {
-    internal interface IRegistryKey
+    public interface IRegistryKey
     {
         string Name { get; }
         string[] GetSubKeyNames();
+        string[] GetValueNames();
         IRegistryKey OpenSubKey(string name);
         string GetValue(string valueName);
     }

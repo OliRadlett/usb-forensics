@@ -1,6 +1,6 @@
 ﻿namespace Work_Mentoring_Project
 {
-    internal interface IRegistryDevice
+    public interface IRegistryDevice
     {
         string DeviceTypeID{ get; }
         string DeviceInstanceID { get; }

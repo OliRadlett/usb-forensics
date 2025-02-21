@@ -24,6 +24,11 @@ namespace Work_Mentoring_Project
             return _key.GetSubKeyNames();
         }
 
+        public string[] GetValueNames()
+        {
+            return _key.GetValueNames();
+        }
+
         public string GetValue(string valueName)
         {
             var kind = _key.GetValueKind(valueName);
@@ -33,7 +38,7 @@ namespace Work_Mentoring_Project
                 case RegistryValueKind.String:
                     return _key.GetValue(valueName).ToString();
                 case RegistryValueKind.MultiString:
-                    return String.Join(", ", _key.GetValue(valueName));
+                    return string.Join(", ", ((string[])_key.GetValue(valueName)!).Select(x => $"{{{x}}}"));
                 default:
                     Console.WriteLine($"Warning unsupported RegistryValueKind ({kind})".Pastel(Color.Yellow));
                     return _key.GetValue(valueName).ToString();

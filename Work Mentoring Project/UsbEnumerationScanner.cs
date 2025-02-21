@@ -6,6 +6,12 @@ namespace Work_Mentoring_Project
 {
     internal class UsbEnumerationScanner
     {
+        private readonly IRegistryRoot root;
+
+        public UsbEnumerationScanner(IRegistryRoot registryRoot)
+        {
+            root = registryRoot;
+        }
 
         public List<IRegistryDevice> Scan()
         {

@@ -1,16 +1,13 @@
-﻿using Microsoft.Win32;
-using System.Runtime.Versioning;
-
-namespace Work_Mentoring_Project
+﻿namespace Work_Mentoring_Project
 {
-    internal class RegistryRoot : IRegistryRoot
+    public class VirtualRegistryRoot : IRegistryRoot
     {
-        [SupportedOSPlatform("Windows")]
+        public VirtualRegistryKey HKLM { get; set; }
+        public List<VirtualRegistryValue> ExpectedValues { get; set; } = [];
+
         public IRegistryKey GetRegistry(string key)
         {
-            var root = Registry.LocalMachine;
-            var registryKey = root;
-
+            IRegistryKey registryKey = HKLM;
             var parts = key.Split('\\');
 
             foreach (var folder in parts)
@@ -21,7 +18,7 @@ namespace Work_Mentoring_Project
                 }
             }
 
-            return new RegistryKey(registryKey);
+            return new VirtualRegistryKey();
         }
     }
 }

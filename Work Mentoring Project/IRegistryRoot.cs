@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Work_Mentoring_Project
 {
-    internal interface IRegistryRoot
+    public interface IRegistryRoot
     {
         IRegistryKey GetRegistry(string key);
     }

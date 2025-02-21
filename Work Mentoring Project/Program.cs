@@ -9,7 +9,9 @@ namespace USBForensics
     {
         private static void ConfigureServices(ServiceCollection services)
         {
+            services.AddSingleton<IRegistryRoot, RegistryRoot>();
             services.AddSingleton<UsbEnumerationScanner>();
+            services.AddSingleton<RegistryToJson>();
         }
 
         private static void Scan(ServiceCollection services)
@@ -21,11 +23,20 @@ namespace USBForensics
             scanner.Print(results);
         }
 
+        private static void ExtractRegistry(ServiceCollection services)
+        {
+            var provider = services.BuildServiceProvider();
+            var json = provider.GetRequiredService<RegistryToJson>();
+
+            json.ExtractRegistry(@"System\CurrentControlSet\Enum\USB", "registry.json");
+        }
+
         private static void Main(string[] args)
         {
             var services = new ServiceCollection();
             ConfigureServices(services);
 
+            ExtractRegistry(services);
             Scan(services);
 
         }
