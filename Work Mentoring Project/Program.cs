@@ -1,6 +1,8 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.Versioning;
-using Work_Mentoring_Project;
+using USBForensics.Interfaces;
+using USBForensics.Scanners;
+using USBForensics.Services;
 
 namespace USBForensics
 {
