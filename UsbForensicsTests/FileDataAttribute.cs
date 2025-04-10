@@ -7,23 +7,21 @@ namespace UsbForensicsTests;
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 public class FileDataAttribute : DataAttribute
 {
-    public FileDataAttribute(Type @dataClass, string filePath, Type @valueClass, string expectedValuePath)
+    public FileDataAttribute(Type @dataClass, string filePath, string expectedValuePath)
     {
         DataClass = dataClass;
         DataPath = filePath;
-        ExpectedValueType = valueClass;
         ExpectedValuePath = expectedValuePath;
     }
 
     public Type DataClass { get; }
     public string DataPath { get; }
-    public Type ExpectedValueType { get; }
     public string ExpectedValuePath{ get; }
 
 
     public override IEnumerable<object[]> GetData(MethodInfo testMethod)
     {
-        if (Activator.CreateInstance(DataClass, DataPath, ExpectedValueType, ExpectedValuePath) is not IEnumerable<object[]> data)
+        if (Activator.CreateInstance(DataClass, DataPath, ExpectedValuePath) is not IEnumerable<object[]> data)
         {
             throw new ArgumentException(
                 string.Format(

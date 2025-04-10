@@ -1,1 +1,601 @@
-{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260","Values":[{"Name":"Capabilities","Value":"128"},{"Name":"Address","Value":"0"},{"Name":"ContainerID","Value":"{00000000-0000-0000-ffff-ffffffffffff}"},{"Name":"HardwareID","Value":"{USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED\u0026REV0030}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED}, {USB\\ROOT_HUB30}"},{"Name":"CompatibleIDs","Value":"{}"},{"Name":"ClassGUID","Value":"{36fc9e60-c465-11cf-8056-444553540000}"},{"Name":"ParentIdPrefix","Value":"5\u00262382d0c0\u00260"},{"Name":"Service","Value":"USBHUB3"},{"Name":"DeviceDesc","Value":"@usbhub3.inf,%usbhub3.roothubdevicedesc%;USB Root Hub (USB 3.0)"},{"Name":"Driver","Value":"{36fc9e60-c465-11cf-8056-444553540000}\\0001"},{"Name":"Mfg","Value":"@usbhub3.inf,%generic.mfg%;(Standard USB HUBs)"},{"Name":"ConfigFlags","Value":"0"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\Port_0006","Values":[{"Name":"VidPidRev","Value":"System.Byte[]"}],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\Port_000A","Values":[{"Name":"UsePLDR","Value":"1"},{"Name":"VidPidRev","Value":"System.Byte[]"}],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\uxd","Values":[],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\WDF","Values":[{"Name":"IdleInWorkingState","Value":"1"}],"SubKeys":[]}]}]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260","Values":[{"Name":"Capabilities","Value":"128"},{"Name":"Address","Value":"0"},{"Name":"ContainerID","Value":"{728d1b08-085d-11f0-a4a8-005056c00008}"},{"Name":"HardwareID","Value":"{USB\\ROOT_HUB30\u0026VID8086\u0026PID15DB\u0026REV0002}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID15DB}, {USB\\ROOT_HUB30}"},{"Name":"CompatibleIDs","Value":"{}"},{"Name":"ClassGUID","Value":"{36fc9e60-c465-11cf-8056-444553540000}"},{"Name":"Service","Value":"USBHUB3"},{"Name":"DeviceDesc","Value":"@usbhub3.inf,%usbhub3.roothubdevicedesc%;USB Root Hub (USB 3.0)"},{"Name":"Driver","Value":"{36fc9e60-c465-11cf-8056-444553540000}\\0004"},{"Name":"Mfg","Value":"@usbhub3.inf,%generic.mfg%;(Standard USB HUBs)"},{"Name":"ConfigFlags","Value":"0"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters\\uxd","Values":[],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters\\WDF","Values":[{"Name":"IdleInWorkingState","Value":"1"}],"SubKeys":[]}]}]}]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001","Values":[{"Name":"DeviceDesc","Value":"@usb.inf,%usb\\composite.devicedesc%;USB Composite Device"},{"Name":"LocationInformation","Value":"Port_#0006.Hub_#0001"},{"Name":"Capabilities","Value":"144"},{"Name":"Address","Value":"6"},{"Name":"ContainerID","Value":"{00000000-0000-0000-ffff-ffffffffffff}"},{"Name":"HardwareID","Value":"{USB\\VID_04F2\u0026PID_B678\u0026REV_0002}, {USB\\VID_04F2\u0026PID_B678}"},{"Name":"CompatibleIDs","Value":"{USB\\COMPAT_VID_04F2\u0026DevClass_00\u0026SubClass_00\u0026Prot00}, {USB\\COMPAT_VID_04F2\u0026DevClass_00\u0026SubClass_00}, {USB\\COMPAT_VID_04F2\u0026DevClass_00}, {USB\\DevClass_00\u0026SubClass_00\u0026Prot_00}, {USB\\DevClass_00\u0026SubClass_00}, {USB\\DevClass_00}, {USB\\COMPOSITE}"},{"Name":"ClassGUID","Value":"{36fc9e60-c465-11cf-8056-444553540000}"},{"Name":"ParentIdPrefix","Value":"6\u002620b1b156\u00260"},{"Name":"Service","Value":"usbccgp"},{"Name":"Driver","Value":"{36fc9e60-c465-11cf-8056-444553540000}\\0002"},{"Name":"Mfg","Value":"@usb.inf,%generic.mfg%;(Standard USB Host Controller)"},{"Name":"ConfigFlags","Value":"0"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001\\Device Parameters","Values":[{"Name":"DeviceSelectiveSuspended","Value":"1"},{"Name":"EnumerationRetryCount","Value":"0"},{"Name":"SymbolicName","Value":"\\??\\USB#VID_04F2\u0026PID_B678#0001#{a5dcbf10-6530-11d2-901f-00c04fb951ed}"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001\\Device Parameters\\Ceip","Values":[{"Name":"DeviceInformation","Value":"8"},{"Name":"PortInterconnectType","Value":"0"}],"SubKeys":[]}]}]}]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000","Values":[{"Name":"DeviceDesc","Value":"@usbvideo.inf,%usbvideo.devicedesc%;USB Video Device"},{"Name":"LocationInformation","Value":"0000.0014.0000.006.000.000.000.000.000"},{"Name":"Capabilities","Value":"164"},{"Name":"Address","Value":"6"},{"Name":"ContainerID","Value":"{00000000-0000-0000-ffff-ffffffffffff}"},{"Name":"HardwareID","Value":"{USB\\VID_04F2\u0026PID_B678\u0026REV_0002\u0026MI_00}, {USB\\VID_04F2\u0026PID_B678\u0026MI_00}"},{"Name":"CompatibleIDs","Value":"{USB\\COMPAT_VID_04f2\u0026Class_0e\u0026SubClass_03\u0026Prot_00}, {USB\\COMPAT_VID_04f2\u0026Class_0e\u0026SubClass_03}, {USB\\COMPAT_VID_04f2\u0026Class_0e}, {USB\\Class_0e\u0026SubClass_03\u0026Prot_00}, {USB\\Class_0e\u0026SubClass_03}, {USB\\Class_0e}"},{"Name":"ConfigFlags","Value":"0"},{"Name":"ClassGUID","Value":"{ca3e7ab9-b4c3-4ae6-8251-579ef933890f}"},{"Name":"Driver","Value":"{ca3e7ab9-b4c3-4ae6-8251-579ef933890f}\\0000"},{"Name":"Service","Value":"usbvideo"},{"Name":"LowerFilters","Value":"{WdmCompanionFilter}"},{"Name":"Mfg","Value":"@usbvideo.inf,%msft%;Microsoft"},{"Name":"FriendlyName","Value":"LG Camera"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters","Values":[{"Name":"VendorRevision","Value":"0"},{"Name":"RevisionId","Value":"2"},{"Name":"ExtPropDescSemaphore","Value":"1"},{"Name":"DeviceSelectiveSuspended","Value":"1"},{"Name":"PowerlineFrequency","Value":"1"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\e5b3b5ac-9725-4f78-963f-03dfb1d828c7","Values":[{"Name":"D3ColdSupported","Value":"1"}],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF\\CompanionConfigurations","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF\\CompanionConfigurations\\WdmCompanionFilter","Values":[{"Name":"CompanionServiceList","Value":"{SecureUSBVideo}"}],"SubKeys":[]}]}]}]}]}]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA","Values":[],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610","Values":[{"Name":"LocationInformation","Value":"Port_#0010.Hub_#0001"},{"Name":"Capabilities","Value":"128"},{"Name":"Address","Value":"10"},{"Name":"ContainerID","Value":"{00000000-0000-0000-ffff-ffffffffffff}"},{"Name":"HardwareID","Value":"{USB\\VID_8087\u0026PID_0AAA\u0026REV_0002}, {USB\\VID_8087\u0026PID_0AAA}"},{"Name":"CompatibleIDs","Value":"{USB\\COMPAT_VID_8087\u0026Class_E0\u0026SubClass_01\u0026Prot_01}, {USB\\COMPAT_VID_8087\u0026Class_E0\u0026SubClass_01}, {USB\\COMPAT_VID_8087\u0026Class_E0}, {USB\\Class_E0\u0026SubClass_01\u0026Prot_01}, {USB\\Class_E0\u0026SubClass_01}, {USB\\Class_E0}"},{"Name":"ConfigFlags","Value":"0"},{"Name":"ClassGUID","Value":"{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}"},{"Name":"ParentIdPrefix","Value":"6\u00261a21957a\u00260"},{"Name":"Service","Value":"BTHUSB"},{"Name":"LowerFilters","Value":"{ibtusb}"},{"Name":"DeviceDesc","Value":"@oem14.inf,%ibt_usb%;Intel(R) Wireless Bluetooth(R)"},{"Name":"Driver","Value":"{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0000"},{"Name":"Mfg","Value":"@oem14.inf,%company_name%;Intel Corporation"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters","Values":[{"Name":"DeviceAddressCache","Value":"380025867576"},{"Name":"DeviceRemoteWakeSupported","Value":"1"},{"Name":"DeviceSelectiveSuspended","Value":"1"},{"Name":"EnumerationRetryCount","Value":"0"},{"Name":"RadioState","Value":"4"},{"Name":"RemoteWakeEnabled","Value":"1"},{"Name":"Scans Before Out of Range","Value":"8"},{"Name":"SCO Max Channels","Value":"2"},{"Name":"Sco Support Type","Value":"0"},{"Name":"Store Link Key COD Masks","Value":"System.Byte[]"},{"Name":"SymbolicLinkName","Value":"\\??\\USB#VID_8087\u0026PID_0AAA#5\u00262382d0c0\u00260\u002610#{0850302a-b344-4fda-9be9-90576b8d46f0}"},{"Name":"VsMsftOpCode","Value":"64542"},{"Name":"SymbolicName","Value":"\\??\\USB#VID_8087\u0026PID_0AAA#5\u00262382d0c0\u00260\u002610#{a5dcbf10-6530-11d2-901f-00c04fb951ed}"}],"SubKeys":[{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\Ceip","Values":[{"Name":"DeviceInformation","Value":"8"},{"Name":"PortInterconnectType","Value":"0"},{"Name":"TroubleshooterRootCauseId","Value":"0"}],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\e5b3b5ac-9725-4f78-963f-03dfb1d828c7","Values":[{"Name":"D3ColdSupported","Value":"1"}],"SubKeys":[]},{"Name":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\WDF","Values":[{"Name":"IdleInWorkingState","Value":"1"}],"SubKeys":[]}]}]}]}]}":"HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\WDF","Values":[{"Name":"IdleInWorkingState","Value":"1"}],"SubKeys":[]}]}]}]}]}
+{
+  "HKLM": {
+    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB",
+    "Values": [
+    ],
+    "SubKeys": [
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30",
+        "Values": [
+        ],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260",
+            "Values": [
+              {
+                "Name": "Capabilities",
+                "Value": "128"
+              },
+              {
+                "Name": "Address",
+                "Value": "0"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{00000000-0000-0000-ffff-ffffffffffff}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED\u0026REV0030}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED}, {USB\\ROOT_HUB30}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{}"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}"
+              },
+              {
+                "Name": "ParentIdPrefix",
+                "Value": "5\u00262382d0c0\u00260"
+              },
+              {
+                "Name": "Service",
+                "Value": "USBHUB3"
+              },
+              {
+                "Name": "DeviceDesc",
+                "Value": "@usbhub3.inf,%usbhub3.roothubdevicedesc%;USB Root Hub (USB 3.0)"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}\\0001"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@usbhub3.inf,%generic.mfg%;(Standard USB HUBs)"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters",
+                "Values": [
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\Port_0006",
+                    "Values": [
+                      {
+                        "Name": "VidPidRev",
+                        "Value": "System.Byte[]"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\Port_000A",
+                    "Values": [
+                      {
+                        "Name": "UsePLDR",
+                        "Value": "1"
+                      },
+                      {
+                        "Name": "VidPidRev",
+                        "Value": "System.Byte[]"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\uxd",
+                    "Values": [
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\4\u00264503c75\u00260\u00260\\Device Parameters\\WDF",
+                    "Values": [
+                      {
+                        "Name": "IdleInWorkingState",
+                        "Value": "1"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260",
+            "Values": [
+              {
+                "Name": "Capabilities",
+                "Value": "128"
+              },
+              {
+                "Name": "Address",
+                "Value": "0"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{728d1b08-085d-11f0-a4a8-005056c00008}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USB\\ROOT_HUB30\u0026VID8086\u0026PID15DB\u0026REV0002}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID15DB}, {USB\\ROOT_HUB30}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{}"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}"
+              },
+              {
+                "Name": "Service",
+                "Value": "USBHUB3"
+              },
+              {
+                "Name": "DeviceDesc",
+                "Value": "@usbhub3.inf,%usbhub3.roothubdevicedesc%;USB Root Hub (USB 3.0)"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}\\0004"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@usbhub3.inf,%generic.mfg%;(Standard USB HUBs)"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters",
+                "Values": [
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters\\uxd",
+                    "Values": [
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\ROOT_HUB30\\7\u0026245288e\u00260\u00260\\Device Parameters\\WDF",
+                    "Values": [
+                      {
+                        "Name": "IdleInWorkingState",
+                        "Value": "1"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678",
+        "Values": [
+        ],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001",
+            "Values": [
+              {
+                "Name": "DeviceDesc",
+                "Value": "@usb.inf,%usb\\composite.devicedesc%;USB Composite Device"
+              },
+              {
+                "Name": "LocationInformation",
+                "Value": "Port_#0006.Hub_#0001"
+              },
+              {
+                "Name": "Capabilities",
+                "Value": "144"
+              },
+              {
+                "Name": "Address",
+                "Value": "6"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{00000000-0000-0000-ffff-ffffffffffff}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USB\\VID_04F2\u0026PID_B678\u0026REV_0002}, {USB\\VID_04F2\u0026PID_B678}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{USB\\COMPAT_VID_04F2\u0026DevClass_00\u0026SubClass_00\u0026Prot00}, {USB\\COMPAT_VID_04F2\u0026DevClass_00\u0026SubClass_00}, {USB\\COMPAT_VID_04F2\u0026DevClass_00}, {USB\\DevClass_00\u0026SubClass_00\u0026Prot_00}, {USB\\DevClass_00\u0026SubClass_00}, {USB\\DevClass_00}, {USB\\COMPOSITE}"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}"
+              },
+              {
+                "Name": "ParentIdPrefix",
+                "Value": "6\u002620b1b156\u00260"
+              },
+              {
+                "Name": "Service",
+                "Value": "usbccgp"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{36fc9e60-c465-11cf-8056-444553540000}\\0002"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@usb.inf,%generic.mfg%;(Standard USB Host Controller)"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001\\Device Parameters",
+                "Values": [
+                  {
+                    "Name": "DeviceSelectiveSuspended",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "EnumerationRetryCount",
+                    "Value": "0"
+                  },
+                  {
+                    "Name": "SymbolicName",
+                    "Value": "\\??\\USB#VID_04F2\u0026PID_B678#0001#{a5dcbf10-6530-11d2-901f-00c04fb951ed}"
+                  }
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\\0001\\Device Parameters\\Ceip",
+                    "Values": [
+                      {
+                        "Name": "DeviceInformation",
+                        "Value": "8"
+                      },
+                      {
+                        "Name": "PortInterconnectType",
+                        "Value": "0"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00",
+        "Values": [
+        ],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000",
+            "Values": [
+              {
+                "Name": "DeviceDesc",
+                "Value": "@usbvideo.inf,%usbvideo.devicedesc%;USB Video Device"
+              },
+              {
+                "Name": "LocationInformation",
+                "Value": "0000.0014.0000.006.000.000.000.000.000"
+              },
+              {
+                "Name": "Capabilities",
+                "Value": "164"
+              },
+              {
+                "Name": "Address",
+                "Value": "6"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{00000000-0000-0000-ffff-ffffffffffff}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USB\\VID_04F2\u0026PID_B678\u0026REV_0002\u0026MI_00}, {USB\\VID_04F2\u0026PID_B678\u0026MI_00}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{USB\\COMPAT_VID_04f2\u0026Class_0e\u0026SubClass_03\u0026Prot_00}, {USB\\COMPAT_VID_04f2\u0026Class_0e\u0026SubClass_03}, {USB\\COMPAT_VID_04f2\u0026Class_0e}, {USB\\Class_0e\u0026SubClass_03\u0026Prot_00}, {USB\\Class_0e\u0026SubClass_03}, {USB\\Class_0e}"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{ca3e7ab9-b4c3-4ae6-8251-579ef933890f}"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{ca3e7ab9-b4c3-4ae6-8251-579ef933890f}\\0000"
+              },
+              {
+                "Name": "Service",
+                "Value": "usbvideo"
+              },
+              {
+                "Name": "LowerFilters",
+                "Value": "{WdmCompanionFilter}"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@usbvideo.inf,%msft%;Microsoft"
+              },
+              {
+                "Name": "FriendlyName",
+                "Value": "LG Camera"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters",
+                "Values": [
+                  {
+                    "Name": "VendorRevision",
+                    "Value": "0"
+                  },
+                  {
+                    "Name": "RevisionId",
+                    "Value": "2"
+                  },
+                  {
+                    "Name": "ExtPropDescSemaphore",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "DeviceSelectiveSuspended",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "PowerlineFrequency",
+                    "Value": "1"
+                  }
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\e5b3b5ac-9725-4f78-963f-03dfb1d828c7",
+                    "Values": [
+                      {
+                        "Name": "D3ColdSupported",
+                        "Value": "1"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF",
+                    "Values": [
+                    ],
+                    "SubKeys": [
+                      {
+                        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF\\CompanionConfigurations",
+                        "Values": [
+                        ],
+                        "SubKeys": [
+                          {
+                            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_04F2\u0026PID_B678\u0026MI_00\\6\u002620b1b156\u00260\u00260000\\Device Parameters\\WUDF\\CompanionConfigurations\\WdmCompanionFilter",
+                            "Values": [
+                              {
+                                "Name": "CompanionServiceList",
+                                "Value": "{SecureUSBVideo}"
+                              }
+                            ],
+                            "SubKeys": [
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA",
+        "Values": [
+        ],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610",
+            "Values": [
+              {
+                "Name": "LocationInformation",
+                "Value": "Port_#0010.Hub_#0001"
+              },
+              {
+                "Name": "Capabilities",
+                "Value": "128"
+              },
+              {
+                "Name": "Address",
+                "Value": "10"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{00000000-0000-0000-ffff-ffffffffffff}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USB\\VID_8087\u0026PID_0AAA\u0026REV_0002}, {USB\\VID_8087\u0026PID_0AAA}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{USB\\COMPAT_VID_8087\u0026Class_E0\u0026SubClass_01\u0026Prot_01}, {USB\\COMPAT_VID_8087\u0026Class_E0\u0026SubClass_01}, {USB\\COMPAT_VID_8087\u0026Class_E0}, {USB\\Class_E0\u0026SubClass_01\u0026Prot_01}, {USB\\Class_E0\u0026SubClass_01}, {USB\\Class_E0}"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}"
+              },
+              {
+                "Name": "ParentIdPrefix",
+                "Value": "6\u00261a21957a\u00260"
+              },
+              {
+                "Name": "Service",
+                "Value": "BTHUSB"
+              },
+              {
+                "Name": "LowerFilters",
+                "Value": "{ibtusb}"
+              },
+              {
+                "Name": "DeviceDesc",
+                "Value": "@oem14.inf,%ibt_usb%;Intel(R) Wireless Bluetooth(R)"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{e0cbf06c-cd8b-4647-bb8a-263b43f0f974}\\0000"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@oem14.inf,%company_name%;Intel Corporation"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters",
+                "Values": [
+                  {
+                    "Name": "DeviceAddressCache",
+                    "Value": "380025867576"
+                  },
+                  {
+                    "Name": "DeviceRemoteWakeSupported",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "DeviceSelectiveSuspended",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "EnumerationRetryCount",
+                    "Value": "0"
+                  },
+                  {
+                    "Name": "RadioState",
+                    "Value": "4"
+                  },
+                  {
+                    "Name": "RemoteWakeEnabled",
+                    "Value": "1"
+                  },
+                  {
+                    "Name": "Scans Before Out of Range",
+                    "Value": "8"
+                  },
+                  {
+                    "Name": "SCO Max Channels",
+                    "Value": "2"
+                  },
+                  {
+                    "Name": "Sco Support Type",
+                    "Value": "0"
+                  },
+                  {
+                    "Name": "Store Link Key COD Masks",
+                    "Value": "System.Byte[]"
+                  },
+                  {
+                    "Name": "SymbolicLinkName",
+                    "Value": "\\??\\USB#VID_8087\u0026PID_0AAA#5\u00262382d0c0\u00260\u002610#{0850302a-b344-4fda-9be9-90576b8d46f0}"
+                  },
+                  {
+                    "Name": "VsMsftOpCode",
+                    "Value": "64542"
+                  },
+                  {
+                    "Name": "SymbolicName",
+                    "Value": "\\??\\USB#VID_8087\u0026PID_0AAA#5\u00262382d0c0\u00260\u002610#{a5dcbf10-6530-11d2-901f-00c04fb951ed}"
+                  }
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\Ceip",
+                    "Values": [
+                      {
+                        "Name": "DeviceInformation",
+                        "Value": "8"
+                      },
+                      {
+                        "Name": "PortInterconnectType",
+                        "Value": "0"
+                      },
+                      {
+                        "Name": "TroubleshooterRootCauseId",
+                        "Value": "0"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\e5b3b5ac-9725-4f78-963f-03dfb1d828c7",
+                    "Values": [
+                      {
+                        "Name": "D3ColdSupported",
+                        "Value": "1"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USB\\VID_8087\u0026PID_0AAA\\5\u00262382d0c0\u00260\u002610\\Device Parameters\\WDF",
+                    "Values": [
+                      {
+                        "Name": "IdleInWorkingState",
+                        "Value": "1"
+                      }
+                    ],
+                    "SubKeys": [
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

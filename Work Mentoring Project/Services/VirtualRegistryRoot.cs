@@ -5,7 +5,6 @@ namespace UsbForensics.Services
     public class VirtualRegistryRoot : IRegistryRoot
     {
         public VirtualRegistryKey HKLM { get; set; }
-        public List<VirtualRegistryValue> ExpectedValues { get; set; } = [];
 
         public IRegistryKey GetRegistry(string key)
         {

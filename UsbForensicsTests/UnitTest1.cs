@@ -8,7 +8,7 @@ namespace UsbForensicsTests
     public class UnitTest1
     {
         [Theory]
-        [FileData(typeof(JsonRegistryFileReader), "Resources/registry.json", typeof(ExpectedValueFile), "Resources/values.json")]
+        [FileData(typeof(JsonRegistryFileReader), "Resources/registry.json", "Resources/values.json")]
         public void Scan_AddsExpectedProperties(IRegistryRoot registry, string key, string? value)
         {
             var usbscanner = new UsbEnumerationScanner(registry);

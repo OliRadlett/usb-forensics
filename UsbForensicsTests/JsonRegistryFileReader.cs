@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using UsbForensics.Services;
 
 namespace UsbForensicsTests
 {
@@ -15,11 +16,11 @@ namespace UsbForensicsTests
 
         public IEnumerator<object[]> GetEnumerator()
         {
-            var data = System.Text.Json.JsonSerializer.Deserialize<RegistryFile>(File.ReadAllText(_dataPath));
+            var data = System.Text.Json.JsonSerializer.Deserialize<VirtualRegistryRoot>(File.ReadAllText(_dataPath));
             var values = System.Text.Json.JsonSerializer.Deserialize<ExpectedValueFile>(File.ReadAllText(_valuePath));
             foreach (var value in values?.ExpectedValues ?? [])
             {
-                yield return [data!.Registry, value.Name, value.Value];
+                yield return [data, value.Name, value.Value];
             }
         }
 
