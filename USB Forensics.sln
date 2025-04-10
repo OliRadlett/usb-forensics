@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35521.163
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "USBForensics", "Work Mentoring Project\USBForensics.csproj", "{C4C2D9BF-2732-4595-884B-5DD81D80EA31}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbForensics", "Work Mentoring Project\UsbForensics.csproj", "{C4C2D9BF-2732-4595-884B-5DD81D80EA31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UsbForensicsTests", "UsbForensicsTests\UsbForensicsTests.csproj", "{8955B5D8-04D0-49B0-A11F-3E0B1C39D0EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{C4C2D9BF-2732-4595-884B-5DD81D80EA31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C4C2D9BF-2732-4595-884B-5DD81D80EA31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C4C2D9BF-2732-4595-884B-5DD81D80EA31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8955B5D8-04D0-49B0-A11F-3E0B1C39D0EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8955B5D8-04D0-49B0-A11F-3E0B1C39D0EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8955B5D8-04D0-49B0-A11F-3E0B1C39D0EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8955B5D8-04D0-49B0-A11F-3E0B1C39D0EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

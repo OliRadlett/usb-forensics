@@ -1,4 +1,4 @@
-﻿namespace USBForensics.Services
+﻿namespace UsbForensics.Services
 {
     public class VirtualRegistryValue
     {

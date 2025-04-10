@@ -1,4 +1,4 @@
-﻿namespace USBForensics.Interfaces
+﻿namespace UsbForensics.Interfaces
 {
     public interface IRegistryKey
     {

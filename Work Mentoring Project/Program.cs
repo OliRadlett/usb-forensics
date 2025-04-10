@@ -1,10 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.Versioning;
-using USBForensics.Interfaces;
-using USBForensics.Scanners;
-using USBForensics.Services;
+using UsbForensics.Interfaces;
+using UsbForensics.Scanners;
+using UsbForensics.Services;
 
-namespace USBForensics
+namespace UsbForensics
 {
     [SupportedOSPlatform("windows")]
     internal class Program

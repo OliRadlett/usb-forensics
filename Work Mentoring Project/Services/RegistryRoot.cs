@@ -1,8 +1,8 @@
 ﻿using Microsoft.Win32;
 using System.Runtime.Versioning;
-using USBForensics.Interfaces;
+using UsbForensics.Interfaces;
 
-namespace USBForensics.Services
+namespace UsbForensics.Services
 {
     public class RegistryRoot : IRegistryRoot
     {

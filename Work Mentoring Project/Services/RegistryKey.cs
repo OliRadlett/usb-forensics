@@ -3,9 +3,9 @@ using Pastel;
 using System.Drawing;
 using System.Runtime.Versioning;
 using System.Security;
-using USBForensics.Interfaces;
+using UsbForensics.Interfaces;
 
-namespace USBForensics.Services
+namespace UsbForensics.Services
 {
     [SupportedOSPlatform("windows")]
     public class RegistryKey : IRegistryKey

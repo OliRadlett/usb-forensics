@@ -1,9 +1,9 @@
 ﻿using Pastel;
 using System.Drawing;
-using USBForensics.Interfaces;
-using USBForensics.Services;
+using UsbForensics.Interfaces;
+using UsbForensics.Services;
 
-namespace USBForensics.Scanners
+namespace UsbForensics.Scanners
 {
     public class UsbEnumerationScanner
     {

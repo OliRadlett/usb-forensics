@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
-using USBForensics.Interfaces;
+using UsbForensics.Interfaces;
 
-namespace USBForensics.Services
+namespace UsbForensics.Services
 {
     public class RegistryDevice : IRegistryDevice
     {
