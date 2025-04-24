@@ -19,7 +19,32 @@ namespace UsbForensics.Services
                 }
             }
 
-            return new VirtualRegistryKey();
+            return AddKey(registryKey);
+        }
+
+        private VirtualRegistryKey AddKey(IRegistryKey key)
+        {
+            var virtualRegistryKey = new VirtualRegistryKey();
+            virtualRegistryKey.Name = key.Name;
+
+            foreach (var value in key.GetValueNames())
+            {
+                var values = new VirtualRegistryValue();
+                values.Name = value;
+                values.Value = key.GetValue(value);
+                virtualRegistryKey.Values.Add(values);
+            }
+
+            foreach (var subKeyName in key.GetSubKeyNames())
+            {
+                var subKey = key.OpenSubKey(subKeyName);
+                if (subKey != null)
+                {
+                    virtualRegistryKey.SubKeys.Add(AddKey(subKey));
+                }
+            }
+
+            return virtualRegistryKey;
         }
     }
 }

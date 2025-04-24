@@ -14,6 +14,8 @@ namespace UsbForensicsTests
             var usbscanner = new UsbEnumerationScanner(registry);
 
             var results = usbscanner.Scan();
+            results.Count.Should().Be(1);
+
         }
     }
 }
