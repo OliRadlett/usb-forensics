@@ -18,9 +18,9 @@ namespace UsbForensicsTests
         {
             var data = System.Text.Json.JsonSerializer.Deserialize<VirtualRegistryRoot>(File.ReadAllText(_dataPath));
             var values = System.Text.Json.JsonSerializer.Deserialize<ExpectedValueFile>(File.ReadAllText(_valuePath));
-            foreach (var value in values?.ExpectedValues ?? [])
+            foreach (var device in values?.ExpectedValues ?? [])
             {
-                yield return [data, value.Name, value.Value];
+                yield return [data, device.keys];
             }
         }
 
@@ -44,9 +44,14 @@ namespace UsbForensicsTests
 
     public class ExpectedValueFile
     {
-        public List<ExpectedValue> ExpectedValues { get; set; }
+        public List<Device> ExpectedValues { get; set; }
 
-        public class ExpectedValue
+        public class Device
+        {
+            public List<KeyAndValue> keys { get; set; }
+        }
+
+        public class KeyAndValue
         {
             public string Name { get; set; }
             public string Value { get; set; }

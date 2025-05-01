@@ -16,6 +16,22 @@ namespace UsbForensics.Services
             REV = ExtractREVFromHardwareID(hardwareId);
             MI = ExtractMIFromHardwareID(hardwareId);
         }
+        public string Get(string key)
+        {
+            switch (key)
+            {
+                case "DeviceTypeID":
+                    return DeviceTypeID;
+                case "DeviceInstanceID":
+                    return DeviceInstanceID;
+                case "ContainerID":
+                    return ContainerID;
+                case "HardwareID":
+                    return HardwareID;
+                default:
+                    throw new ArgumentException($"Key '{key}' not found.");
+            }
+        }
 
         public string DeviceTypeID { get; }
         public string DeviceInstanceID { get; }
