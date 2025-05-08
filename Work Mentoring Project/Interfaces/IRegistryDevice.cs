@@ -2,9 +2,7 @@
 {
     public interface IRegistryDevice
     {
-        string DeviceTypeID { get; }
-        string DeviceInstanceID { get; }
-        string HardwareID { get; }
+        string ID { get; }
         public void Print();
         string Get(string key);
     }

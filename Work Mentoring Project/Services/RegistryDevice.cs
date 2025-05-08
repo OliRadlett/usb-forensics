@@ -5,55 +5,36 @@ namespace UsbForensics.Services
 {
     public class RegistryDevice : IRegistryDevice
     {
-        public RegistryDevice(string deviceTypeId, string deviceInstanceId, string containerId, string hardwareId)
-        {
-            DeviceTypeID = deviceTypeId;
-            DeviceInstanceID = deviceInstanceId;
-            ContainerID = containerId;
-            HardwareID = hardwareId;
-            VID = ExtractVIDFromHardwareID(hardwareId);
-            PID = ExtractPIDFromHardwareID(hardwareId);
-            REV = ExtractREVFromHardwareID(hardwareId);
-            MI = ExtractMIFromHardwareID(hardwareId);
-        }
-        public string Get(string key)
-        {
-            switch (key)
-            {
-                case "DeviceTypeID":
-                    return DeviceTypeID;
-                case "DeviceInstanceID":
-                    return DeviceInstanceID;
-                case "ContainerID":
-                    return ContainerID;
-                case "HardwareID":
-                    return HardwareID;
-                default:
-                    throw new ArgumentException($"Key '{key}' not found.");
-            }
-        }
+        public Dictionary<string, string> properties;
+        public string Id;
 
-        public string DeviceTypeID { get; }
-        public string DeviceInstanceID { get; }
-        public string ContainerID { get; }
-        public string HardwareID { get; }
-        public string VID { get; }
-        public string PID { get; }
-        public string REV { get; }
-        public string MI { get; }
+        public string ID => throw new NotImplementedException();
 
+        public RegistryDevice(string Id, Dictionary<string, string> properties)
+        {
+            this.Id = Id;
+            this.properties = properties;
+        }
 
         public void Print()
         {
             Console.WriteLine("-------------------------------------------------------------------------------------");
-            Console.WriteLine($"DeviceTypeID: {DeviceTypeID}");
-            Console.WriteLine($"DeviceInstanceID: {DeviceInstanceID}");
-            Console.WriteLine($"ContainerID: {ContainerID}");
-            Console.WriteLine($"HardwareID: {HardwareID}");
-            Console.WriteLine($"Version ID: {VID}");
-            Console.WriteLine($"Product ID: {PID}");
-            Console.WriteLine($"Revision: {REV}");
-            Console.WriteLine($"MI: {MI}");
+            foreach (var property in properties)
+            {
+                Console.WriteLine($"{property.Key}: {property.Value}");
+            }
+        }
+
+        public string Get(string key)
+        {
+            if (properties.ContainsKey(key))
+            {
+                return properties[key];
+            }
+            else
+            {
+                throw new KeyNotFoundException($"Key '{key}' not found in properties.");
+            }
         }
 
         private string ExtractVIDFromHardwareID(string HardwareID)

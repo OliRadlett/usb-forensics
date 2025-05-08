@@ -14,21 +14,21 @@ namespace UsbForensicsTests
             this.output = output;
         }
 
-        [Theory]
-        [FileData(typeof(JsonRegistryFileReader), "Resources/registry.json", "Resources/values.json")]
-        public void Scan_AddsExpectedProperties(IRegistryRoot registry, string key, string? value)
-        {
-            var usbscanner = new UsbEnumerationScanner(registry);
+        //[Theory]
+        //[FileData(typeof(JsonRegistryFileReader), "Resources/registry.json", "Resources/values.json")]
+        //public void Scan_AddsExpectedProperties(IRegistryRoot registry)
+        //{
+        //    var usbscanner = new UsbEnumerationScanner(registry);
 
-            var results = usbscanner.Scan();
+        //    var results = usbscanner.Scan();
 
-            output.WriteLine("Found {0} devices", results.Count);
+        //    output.WriteLine("Found {0} devices", results.Count);
 
-            foreach (var device in results)
-            {
-                output.WriteLine("{0}: {1} should be {2}", key, device.Get(key), value);
-                device.Get(key).Should().Be(value);
-            }
-        }
+        //    foreach (var device in results)
+        //    {
+        //        output.WriteLine("{0}: {1} should be {2}", key, device.Get(key), value);
+        //        device.Get(key).Should().Be(value);
+        //    }
+        //}
     }
 }

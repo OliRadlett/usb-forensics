@@ -5,18 +5,18 @@ using UsbForensics.Services;
 
 namespace UsbForensics.Scanners
 {
-    public class UsbEnumerationScanner
+    public class UsbStorageScanner
     {
         private readonly IRegistryRoot root;
 
-        public UsbEnumerationScanner(IRegistryRoot registryRoot)
+        public UsbStorageScanner(IRegistryRoot registryRoot)
         {
             root = registryRoot;
         }
 
         public List<IRegistryDevice> Scan()
         {
-            var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
+            var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USBSTOR");
             List<IRegistryDevice> devices = new List<IRegistryDevice>();
 
             Console.WriteLine($"Looking for devices in: {systemKey.Name}".PastelBg(Color.White).Pastel(Color.Black));
@@ -41,9 +41,7 @@ namespace UsbForensics.Scanners
 
                 properties.Add("DeviceTypeID", itemKey.Name);
                 properties.Add("DeviceInstanceID", deviceKey.Name);
-                properties.Add("DeviceID", device);
-                properties.Add("ContainerID", containerId);
-                properties.Add("HardwareID", hardwareId);
+                // And the rest of the properties
 
                 devices.Add(new RegistryDevice(id, properties));
             }
