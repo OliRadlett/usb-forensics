@@ -13,16 +13,22 @@ namespace UsbForensics
         {
             services.AddSingleton<IRegistryRoot, RegistryRoot>();
             services.AddSingleton<UsbEnumerationScanner>();
+            services.AddSingleton<UsbStorageEnumerationScanner>();
             services.AddSingleton<RegistryToJson>();
         }
 
         private static void Scan(ServiceCollection services)
         {
             var provider = services.BuildServiceProvider();
-            var scanner = provider.GetRequiredService<UsbEnumerationScanner>();
+            var usbEnumerationScanner = provider.GetRequiredService<UsbEnumerationScanner>();
+            var usbStorageEnumerationScanner = provider.GetRequiredService<UsbStorageEnumerationScanner>();
 
-            var results = scanner.Scan();
-            scanner.Print(results);
+            var usbEnumerationResults = usbEnumerationScanner.Scan();
+            var usbStorageEnumerationResults = usbStorageEnumerationScanner.Scan();
+
+            usbEnumerationScanner.Print(usbEnumerationResults);
+            usbStorageEnumerationScanner.Print(usbStorageEnumerationResults);
+
         }
 
         private static void ExtractRegistry(ServiceCollection services)

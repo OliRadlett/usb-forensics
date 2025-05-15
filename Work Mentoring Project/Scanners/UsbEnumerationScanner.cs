@@ -14,10 +14,10 @@ namespace UsbForensics.Scanners
             root = registryRoot;
         }
 
-        public List<IRegistryDevice> Scan()
+        public List<UsbEnumerationDevice> Scan()
         {
             var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
-            List<IRegistryDevice> devices = new List<IRegistryDevice>();
+            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
 
             Console.WriteLine($"Looking for devices in: {systemKey.Name}".PastelBg(Color.White).Pastel(Color.Black));
             foreach (var item in systemKey.GetSubKeyNames())
@@ -28,23 +28,23 @@ namespace UsbForensics.Scanners
             return devices;
         }
 
-        private IEnumerable<IRegistryDevice> GetDevicesFromKey(IRegistryKey itemKey)
+        private IEnumerable<UsbEnumerationDevice> GetDevicesFromKey(IRegistryKey itemKey)
         {
-            List<IRegistryDevice> devices = new List<IRegistryDevice>();
+            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
             foreach (var device in itemKey.GetSubKeyNames())
             {
                 var deviceKey = itemKey.OpenSubKey(device);
                 var containerId = deviceKey.GetValue("ContainerID");
                 string hardwareId = deviceKey.GetValue("HardwareID");
 
-                devices.Add(new RegistryDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId));
+                devices.Add(new UsbEnumerationDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId));
             }
             return devices;
         }
 
-        public void Print(List<IRegistryDevice> devices)
+        public void Print(List<UsbEnumerationDevice> devices)
         {
-            foreach (IRegistryDevice device in devices)
+            foreach (UsbEnumerationDevice device in devices)
             {
                 device.Print();
             }
