@@ -1,4 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection;
 using System.Runtime.Versioning;
 using UsbForensics.Interfaces;
 using UsbForensics.Scanners;
@@ -13,20 +13,22 @@ namespace UsbForensics
         {
             services.AddSingleton<IRegistryRoot, RegistryRoot>();
             services.AddSingleton<UsbEnumerationScanner>();
-            services.AddSingleton<UsbStorageScanner>();
+            services.AddSingleton<UsbStorageEnumerationScanner>();
             services.AddSingleton<RegistryToJson>();
         }
 
         private static void Scan(ServiceCollection services)
         {
             var provider = services.BuildServiceProvider();
-            var enumerationScanner = provider.GetRequiredService<UsbEnumerationScanner>();
-            var storageScanner = provider.GetRequiredService<UsbStorageScanner>();
+            var usbEnumerationScanner = provider.GetRequiredService<UsbEnumerationScanner>();
+            var usbStorageEnumerationScanner = provider.GetRequiredService<UsbStorageEnumerationScanner>();
 
-            var results = enumerationScanner.Scan();
-            enumerationScanner.Print(results);
-            results = storageScanner.Scan();
-            storageScanner.Print(results);
+            var usbEnumerationResults = usbEnumerationScanner.Scan();
+            var usbStorageEnumerationResults = usbStorageEnumerationScanner.Scan();
+
+            usbEnumerationScanner.Print(usbEnumerationResults);
+            usbStorageEnumerationScanner.Print(usbStorageEnumerationResults);
+
         }
 
         private static void ExtractRegistry(ServiceCollection services)

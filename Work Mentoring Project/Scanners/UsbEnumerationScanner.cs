@@ -1,4 +1,4 @@
-﻿using Pastel;
+using Pastel;
 using System.Drawing;
 using UsbForensics.Interfaces;
 using UsbForensics.Services;
@@ -14,10 +14,10 @@ namespace UsbForensics.Scanners
             root = registryRoot;
         }
 
-        public List<IRegistryDevice> Scan()
+        public List<UsbEnumerationDevice> Scan()
         {
             var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
-            List<IRegistryDevice> devices = new List<IRegistryDevice>();
+            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
 
             Console.WriteLine($"Looking for devices in: {systemKey.Name}".PastelBg(Color.White).Pastel(Color.Black));
             foreach (var item in systemKey.GetSubKeyNames())
@@ -28,9 +28,9 @@ namespace UsbForensics.Scanners
             return devices;
         }
 
-        private IEnumerable<IRegistryDevice> GetDevicesFromKey(IRegistryKey itemKey)
+        private IEnumerable<UsbEnumerationDevice> GetDevicesFromKey(IRegistryKey itemKey)
         {
-            List<IRegistryDevice> devices = new List<IRegistryDevice>();
+            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
             foreach (var device in itemKey.GetSubKeyNames())
             {
                 var properties = new Dictionary<string, string>();
@@ -39,20 +39,14 @@ namespace UsbForensics.Scanners
                 var hardwareId = deviceKey.GetValue("HardwareID");
                 var id = "propety and" + "another property";
 
-                properties.Add("DeviceTypeID", itemKey.Name);
-                properties.Add("DeviceInstanceID", deviceKey.Name);
-                properties.Add("DeviceID", device);
-                properties.Add("ContainerID", containerId);
-                properties.Add("HardwareID", hardwareId);
-
-                devices.Add(new RegistryDevice(id, properties));
+                devices.Add(new UsbEnumerationDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId));
             }
             return devices;
         }
 
-        public void Print(List<IRegistryDevice> devices)
+        public void Print(List<UsbEnumerationDevice> devices)
         {
-            foreach (IRegistryDevice device in devices)
+            foreach (UsbEnumerationDevice device in devices)
             {
                 device.Print();
             }
