@@ -1,9 +1,10 @@
-﻿using USBForensics.Interfaces;
+﻿using UsbForensics.Interfaces;
+using USBForensics.Interfaces;
 using USBForensics.Services;
 
 namespace UsbForensics.Services
 {
-    public class UsbStorageEnumerationDevice : IPrintable
+    public class UsbStorageEnumerationDevice : IPrintable, IRegistryDevice
     {
         public UsbStorageEnumerationDevice(string deviceTypeId, string deviceInstanceId, string containerId, string friendlyName, string hardwareId, string service, string deviceDescription)
         {
@@ -14,10 +15,10 @@ namespace UsbForensics.Services
             HardwareID = hardwareId;
             Service = service;
             DeviceDescription = deviceDescription;
-            VID = UsbDeviceHelpers.ExtractVIDFromHardwareID(hardwareId);
-            PID = UsbDeviceHelpers.ExtractPIDFromHardwareID(hardwareId);
-            REV = UsbDeviceHelpers.ExtractREVFromHardwareID(hardwareId);
-            MI = UsbDeviceHelpers.ExtractMIFromHardwareID(hardwareId);
+            //VID = UsbDeviceHelpers.ExtractVIDFromHardwareID(hardwareId);
+            //PID = UsbDeviceHelpers.ExtractPIDFromHardwareID(hardwareId);
+            //REV = UsbDeviceHelpers.ExtractREVFromHardwareID(hardwareId);
+            //MI = UsbDeviceHelpers.ExtractMIFromHardwareID(hardwareId);
         }
         public string Get(string key)
         {
@@ -43,10 +44,10 @@ namespace UsbForensics.Services
         public string HardwareID { get; }
         public string Service { get; }
         public string DeviceDescription { get; }
-        public string VID { get; }
-        public string PID { get; }
-        public string REV { get; }
-        public string MI { get; }
+        //public string VID { get; }
+        //public string PID { get; }
+        //public string REV { get; }
+        //public string MI { get; }
 
         public void Print()
         {
@@ -57,10 +58,10 @@ namespace UsbForensics.Services
             Console.WriteLine($"Hardware ID: {HardwareID}");
             Console.WriteLine($"Service: {Service}");
             Console.WriteLine($"Device Description: {DeviceDescription}");
-            Console.WriteLine($"VID: {VID}");
-            Console.WriteLine($"PID: {PID}");
-            Console.WriteLine($"REV: {REV}");
-            Console.WriteLine($"MI: {MI}");
+            //Console.WriteLine($"VID: {VID}");
+            //Console.WriteLine($"PID: {PID}");
+            //Console.WriteLine($"REV: {REV}");
+            //Console.WriteLine($"MI: {MI}");
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Runtime.Versioning;
 using UsbForensics.Interfaces;
 using UsbForensics.Scanners;
 using UsbForensics.Services;
+using USBForensics.Services;
 
 namespace UsbForensics
 {
@@ -26,8 +27,9 @@ namespace UsbForensics
             var usbEnumerationResults = usbEnumerationScanner.Scan();
             var usbStorageEnumerationResults = usbStorageEnumerationScanner.Scan();
 
-            usbEnumerationScanner.Print(usbEnumerationResults);
-            usbStorageEnumerationScanner.Print(usbStorageEnumerationResults);
+            //usbEnumerationScanner.Print(usbEnumerationResults);
+            //usbStorageEnumerationScanner.Print(usbStorageEnumerationResults);
+            var mergeDevices = MergeDevices.Merge(usbEnumerationResults, usbStorageEnumerationResults);
 
         }
 

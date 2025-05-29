@@ -1,10 +1,10 @@
-﻿using System.Text.RegularExpressions;
+﻿using UsbForensics.Interfaces;
 using USBForensics.Interfaces;
 using USBForensics.Services;
 
 namespace UsbForensics.Services
 {
-    public class UsbEnumerationDevice : IPrintable
+    public class UsbEnumerationDevice : IPrintable, IRegistryDevice
     {
         public UsbEnumerationDevice(string deviceTypeId, string deviceInstanceId, string containerId, string hardwareId)
         {
