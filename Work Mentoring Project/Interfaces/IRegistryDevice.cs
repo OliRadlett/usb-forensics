@@ -3,5 +3,6 @@
     public interface IRegistryDevice
     {
         string Get(string key);
+        void Print();
     }
 }

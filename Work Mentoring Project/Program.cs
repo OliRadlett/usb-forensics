@@ -29,7 +29,11 @@ namespace UsbForensics
 
             //usbEnumerationScanner.Print(usbEnumerationResults);
             //usbStorageEnumerationScanner.Print(usbStorageEnumerationResults);
-            var mergeDevices = MergeDevices.Merge(usbEnumerationResults, usbStorageEnumerationResults);
+            //var mergeDevices = MergeDevices.Merge(usbEnumerationResults, usbStorageEnumerationResults);
+
+            MergeDevices.Merge(usbEnumerationResults, usbStorageEnumerationResults);
+
+            usbEnumerationScanner.Print(usbEnumerationResults);
 
         }
 

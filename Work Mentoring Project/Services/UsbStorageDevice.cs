@@ -4,9 +4,9 @@ using USBForensics.Services;
 
 namespace UsbForensics.Services
 {
-    public class UsbStorageEnumerationDevice : IPrintable, IRegistryDevice
+    public class UsbStorageDevice : IPrintable, IRegistryDevice
     {
-        public UsbStorageEnumerationDevice(string deviceTypeId, string deviceInstanceId, string containerId, string friendlyName, string hardwareId, string service, string deviceDescription)
+        public UsbStorageDevice(string deviceTypeId, string deviceInstanceId, string containerId, string friendlyName, string hardwareId, string service, string deviceDescription)
         {
             DeviceTypeID = deviceTypeId;
             DeviceInstanceID = deviceInstanceId;

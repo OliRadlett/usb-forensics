@@ -5,21 +5,14 @@ namespace USBForensics.Services
 {
     public class MergeDevices
     {
-        public static List<UsbDevice> Merge(List<UsbEnumerationDevice> usbEnumerationDevices, List<UsbStorageEnumerationDevice> usbStorageEnumerationDevices)
+        public static void Merge(List<UsbDevice> usbDevices, List<UsbStorageDevice> usbStorageDevices)
         {
-            List<UsbDevice> devices = new List<UsbDevice>();
-            foreach (UsbEnumerationDevice usbEnumerationDevice in usbEnumerationDevices)
+            foreach (var device in usbDevices.Where(device => device.Service == "USBSTOR"))
             {
-                foreach (UsbStorageEnumerationDevice usbStorageEnumerationDevice in usbStorageEnumerationDevices)
-                {
-                    if (usbEnumerationDevice.DeviceInstanceID == usbStorageEnumerationDevice.DeviceInstanceID)
-                    {
-                        devices.Add(new UsbDevice(usbEnumerationDevice.DeviceInstanceID, usbEnumerationDevice.VID, usbEnumerationDevice.PID, usbEnumerationDevice.REV, usbEnumerationDevice.MI, usbStorageEnumerationDevice.Service));
-                        break;
-                    }
-                }
+                device.StorageDevices = usbStorageDevices
+                    .Where(storageDevice => storageDevice.DeviceInstanceID == device.DeviceInstanceID && storageDevice.ContainerID == device.ContainerID)
+                    .ToList();
             }
-            return devices;
         }
     }
 }

@@ -14,10 +14,10 @@ namespace UsbForensics.Scanners
             root = registryRoot;
         }
 
-        public List<UsbStorageEnumerationDevice> Scan()
+        public List<UsbStorageDevice> Scan()
         {
             var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USBStor");
-            List<UsbStorageEnumerationDevice> devices = new List<UsbStorageEnumerationDevice>();
+            List<UsbStorageDevice> devices = new List<UsbStorageDevice>();
 
             Console.WriteLine($"Looking for devices in: {systemKey.Name}".PastelBg(Color.White).Pastel(Color.Black));
             foreach (var item in systemKey.GetSubKeyNames())
@@ -28,9 +28,9 @@ namespace UsbForensics.Scanners
             return devices;
         }
 
-        private IEnumerable<UsbStorageEnumerationDevice> GetDevicesFromKey(IRegistryKey itemKey)
+        private IEnumerable<UsbStorageDevice> GetDevicesFromKey(IRegistryKey itemKey)
         {
-            List<UsbStorageEnumerationDevice> devices = new List<UsbStorageEnumerationDevice>();
+            List<UsbStorageDevice> devices = new List<UsbStorageDevice>();
             foreach (var device in itemKey.GetSubKeyNames())
             {
                 var deviceKey = itemKey.OpenSubKey(device);
@@ -40,14 +40,14 @@ namespace UsbForensics.Scanners
                 string service = deviceKey.GetValue("Service");
                 string deviceDescription = deviceKey.GetValue("DeviceDesc");
 
-                devices.Add(new UsbStorageEnumerationDevice(itemKey.Name, deviceKey.Name, containerId, friendlyName, hardwareId, service, deviceDescription));
+                devices.Add(new UsbStorageDevice(itemKey.Name, deviceKey.Name, containerId, friendlyName, hardwareId, service, deviceDescription));
             }
             return devices;
         }
 
-        public void Print(List<UsbStorageEnumerationDevice> devices)
+        public void Print(List<UsbStorageDevice> devices)
         {
-            foreach (UsbStorageEnumerationDevice device in devices)
+            foreach (UsbStorageDevice device in devices)
             {
                 device.Print();
             }

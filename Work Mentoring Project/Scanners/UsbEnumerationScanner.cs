@@ -14,10 +14,10 @@ namespace UsbForensics.Scanners
             root = registryRoot;
         }
 
-        public List<UsbEnumerationDevice> Scan()
+        public List<UsbDevice> Scan()
         {
             var systemKey = root.GetRegistry(@"System\CurrentControlSet\Enum\USB");
-            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
+            List<UsbDevice> devices = new List<UsbDevice>();
 
             Console.WriteLine($"Looking for devices in: {systemKey.Name}".PastelBg(Color.White).Pastel(Color.Black));
             foreach (var item in systemKey.GetSubKeyNames())
@@ -28,25 +28,25 @@ namespace UsbForensics.Scanners
             return devices;
         }
 
-        private IEnumerable<UsbEnumerationDevice> GetDevicesFromKey(IRegistryKey itemKey)
+        private IEnumerable<UsbDevice> GetDevicesFromKey(IRegistryKey itemKey)
         {
-            List<UsbEnumerationDevice> devices = new List<UsbEnumerationDevice>();
+            List<UsbDevice> devices = new List<UsbDevice>();
             foreach (var device in itemKey.GetSubKeyNames())
             {
                 var properties = new Dictionary<string, string>();
                 var deviceKey = itemKey.OpenSubKey(device);
                 var containerId = deviceKey.GetValue("ContainerID");
                 var hardwareId = deviceKey.GetValue("HardwareID");
-                var id = "propety and" + "another property";
+                var service = deviceKey.GetValue("Service");
 
-                devices.Add(new UsbEnumerationDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId));
+                devices.Add(new UsbDevice(itemKey.Name, deviceKey.Name, containerId, hardwareId, service));
             }
             return devices;
         }
 
-        public void Print(List<UsbEnumerationDevice> devices)
+        public void Print(List<UsbDevice> devices)
         {
-            foreach (UsbEnumerationDevice device in devices)
+            foreach (UsbDevice device in devices)
             {
                 device.Print();
             }

@@ -23,7 +23,7 @@ namespace UsbForensicsTests
                 yield return [data, device.keys];
             }
         }
-
+        
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
@@ -48,13 +48,7 @@ namespace UsbForensicsTests
 
         public class Device
         {
-            public List<KeyAndValue> keys { get; set; }
-        }
-
-        public class KeyAndValue
-        {
-            public string Name { get; set; }
-            public string Value { get; set; }
+            public List<KeyValuePair<string, string>> keys { get; set; }
         }
     }
 
