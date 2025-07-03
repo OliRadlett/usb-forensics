@@ -23,9 +23,19 @@ namespace UsbForensicsTests
             var results = usbscanner.Scan();
 
             output.WriteLine("Found {0} devices", results.Count);
+            output.WriteLine("Found {0} expected values", values.Count);
 
-            foreach (var device in results)
+            for (var i = 0; i < results.Count; i++)
             {
+                if (i >= values.Count)
+                {
+                    output.WriteLine("No expected value for device {0}", i);
+                    continue;
+                }
+                var device = results[i];
+                var expectedValues = values[i];
+                output.WriteLine("Registry HWID {0}", device.HardwareID);
+                output.WriteLine("Values HWID {0}", expectedValues.Value);
                 //output.WriteLine("{0}: {1} should be {2}", key, device.Get(key), value);
                 //device.Get(key).Should().Be(value);
                 //output.WriteLine(key);

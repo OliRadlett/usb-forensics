@@ -20,25 +20,17 @@ namespace UsbForensicsTests
             var values = System.Text.Json.JsonSerializer.Deserialize<ExpectedValueFile>(File.ReadAllText(_valuePath));
             foreach (var device in values?.ExpectedValues ?? [])
             {
-                yield return [data, device.keys];
+                var keyValuePairs = device.RegistryKeys?
+                    .Select(k => new KeyValuePair<string, string>(k.Name, k.Value))
+                    .ToList();
+                yield return [data, keyValuePairs];
             }
         }
-        
+
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             return GetEnumerator();
-        }
-    }
-
-
-    public class RegistryFile
-    {
-        public List<RegistryEntry> Registry{ get; set; }
-
-        public class RegistryEntry
-        {
-            public string Name { get; set; }
-            public string Value { get; set; }
         }
     }
 
@@ -48,8 +40,15 @@ namespace UsbForensicsTests
 
         public class Device
         {
-            public List<KeyValuePair<string, string>> keys { get; set; }
+            public List<RegistryKey> RegistryKeys { get; set; }
+        }
+
+        public class RegistryKey
+        {
+            public string Name { get; set; }
+            public string Value { get; set; }
         }
     }
+
 
 }
