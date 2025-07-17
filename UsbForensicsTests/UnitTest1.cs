@@ -34,11 +34,9 @@ namespace UsbForensicsTests
                 }
                 var device = results[i];
                 var expectedValues = values[i];
-                output.WriteLine("Registry HWID {0}", device.HardwareID);
-                output.WriteLine("Values HWID {0}", expectedValues.Value);
-                //output.WriteLine("{0}: {1} should be {2}", key, device.Get(key), value);
-                //device.Get(key).Should().Be(value);
-                //output.WriteLine(key);
+                output.WriteLine("Values {0} {1}", expectedValues.Key, expectedValues.Value);
+                output.WriteLine("Device {0} {1}", expectedValues.Key, device.Get(expectedValues.Key));
+                device.Get(expectedValues.Key).Should().Be(expectedValues.Value);
             }
         }
     }
