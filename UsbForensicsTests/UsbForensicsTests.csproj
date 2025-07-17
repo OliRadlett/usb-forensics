@@ -32,10 +32,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Resources\registry.json">
+    <None Update="Resources\registry_usb_enumeration.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Update="Resources\values.json">
+    <None Update="Resources\registry_usb_storage.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\usb_storage_values.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Resources\usb_enumeration_values.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

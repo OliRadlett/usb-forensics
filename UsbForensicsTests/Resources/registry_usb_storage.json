@@ -1,0 +1,184 @@
+{
+  "HKLM": {
+    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor",
+    "Values": [],
+    "SubKeys": [
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\CdRom\u0026Ven_IronKey\u0026Prod_CD-ROM\u0026Rev_2.08",
+        "Values": [],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\CdRom\u0026Ven_IronKey\u0026Prod_CD-ROM\u0026Rev_2.08\\00513257\u00260",
+            "Values": [
+              {
+                "Name": "DeviceDesc",
+                "Value": "@cdrom.inf,%gencdrom_devdesc%;CD-ROM Drive"
+              },
+              {
+                "Name": "Capabilities",
+                "Value": "16"
+              },
+              {
+                "Name": "Address",
+                "Value": "7"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{f640c758-e795-5eb9-a60a-7cb7777af2bc}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USBSTOR\\CdRomIronKey_CD-ROM__________2.08}, {USBSTOR\\CdRomIronKey_CD-ROM__________}, {USBSTOR\\CdRomIronKey_}, {USBSTOR\\IronKey_CD-ROM__________2}, {IronKey_CD-ROM__________2}, {USBSTOR\\GenCdRom}, {GenCdRom}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{USBSTOR\\CdRom}, {USBSTOR\\RAW}, {GenCdRom}"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{4d36e965-e325-11ce-bfc1-08002be10318}"
+              },
+              {
+                "Name": "Service",
+                "Value": "cdrom"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{4d36e965-e325-11ce-bfc1-08002be10318}\\0000"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@cdrom.inf,%genmanufacturer%;(Standard CD-ROM drives)"
+              },
+              {
+                "Name": "FriendlyName",
+                "Value": "IronKey CD-ROM USB Device"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\CdRom\u0026Ven_IronKey\u0026Prod_CD-ROM\u0026Rev_2.08\\00513257\u00260\\Device Parameters",
+                "Values": [
+                  {
+                    "Name": "DefaultRequestFlags",
+                    "Value": "8"
+                  }
+                ],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\CdRom\u0026Ven_IronKey\u0026Prod_CD-ROM\u0026Rev_2.08\\00513257\u00260\\Device Parameters\\Storport",
+                    "Values": [
+                      {
+                        "Name": "MinimumIdleTimeoutInMS",
+                        "Value": "0"
+                      }
+                    ],
+                    "SubKeys": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\Disk\u0026Ven_IronKey\u0026Prod_Secure_Drive\u0026Rev_2.08",
+        "Values": [],
+        "SubKeys": [
+          {
+            "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\Disk\u0026Ven_IronKey\u0026Prod_Secure_Drive\u0026Rev_2.08\\00513257\u00261",
+            "Values": [
+              {
+                "Name": "DeviceDesc",
+                "Value": "@disk.inf,%disk_devdesc%;Disk drive"
+              },
+              {
+                "Name": "Capabilities",
+                "Value": "16"
+              },
+              {
+                "Name": "Address",
+                "Value": "7"
+              },
+              {
+                "Name": "ContainerID",
+                "Value": "{f640c758-e795-5eb9-a60a-7cb7777af2bc}"
+              },
+              {
+                "Name": "HardwareID",
+                "Value": "{USBSTOR\\DiskIronKey_Secure_Drive____2.08}, {USBSTOR\\DiskIronKey_Secure_Drive____}, {USBSTOR\\DiskIronKey_}, {USBSTOR\\IronKey_Secure_Drive____2}, {IronKey_Secure_Drive____2}, {USBSTOR\\GenDisk}, {GenDisk}"
+              },
+              {
+                "Name": "CompatibleIDs",
+                "Value": "{USBSTOR\\Disk}, {USBSTOR\\RAW}, {GenDisk}"
+              },
+              {
+                "Name": "ClassGUID",
+                "Value": "{4d36e967-e325-11ce-bfc1-08002be10318}"
+              },
+              {
+                "Name": "Service",
+                "Value": "disk"
+              },
+              {
+                "Name": "Driver",
+                "Value": "{4d36e967-e325-11ce-bfc1-08002be10318}\\0001"
+              },
+              {
+                "Name": "Mfg",
+                "Value": "@disk.inf,%genmanufacturer%;(Standard disk drives)"
+              },
+              {
+                "Name": "FriendlyName",
+                "Value": "IronKey Secure Drive USB Device"
+              },
+              {
+                "Name": "ConfigFlags",
+                "Value": "0"
+              }
+            ],
+            "SubKeys": [
+              {
+                "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\Disk\u0026Ven_IronKey\u0026Prod_Secure_Drive\u0026Rev_2.08\\00513257\u00261\\Device Parameters",
+                "Values": [],
+                "SubKeys": [
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\Disk\u0026Ven_IronKey\u0026Prod_Secure_Drive\u0026Rev_2.08\\00513257\u00261\\Device Parameters\\MediaChangeNotification",
+                    "Values": [],
+                    "SubKeys": []
+                  },
+                  {
+                    "Name": "HKEY_LOCAL_MACHINE\\System\\CurrentControlSet\\Enum\\USBStor\\Disk\u0026Ven_IronKey\u0026Prod_Secure_Drive\u0026Rev_2.08\\00513257\u00261\\Device Parameters\\Partmgr",
+                    "Values": [
+                      {
+                        "Name": "DiskId",
+                        "Value": "{42d10b0b-160b-11f0-a4a9-380025867572}"
+                      },
+                      {
+                        "Name": "Attributes",
+                        "Value": "0"
+                      },
+                      {
+                        "Name": "PartitionTableCache",
+                        "Value": "System.Byte[]"
+                      },
+                      {
+                        "Name": "AttributesTableCache",
+                        "Value": "System.Byte[]"
+                      }
+                    ],
+                    "SubKeys": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
