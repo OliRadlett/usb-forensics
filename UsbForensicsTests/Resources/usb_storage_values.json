@@ -4,23 +4,11 @@
       "RegistryKeys": [
         {
           "Name": "HardwareID",
-          "Value": "{USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED\u0026REV0030}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED}, {USB\\ROOT_HUB30}"
+          "Value": "{USBSTOR\\CdRomIronKey_CD-ROM__________2.08}, {USBSTOR\\CdRomIronKey_CD-ROM__________}, {USBSTOR\\CdRomIronKey_}, {USBSTOR\\IronKey_CD-ROM__________2}, {IronKey_CD-ROM__________2}, {USBSTOR\\GenCdRom}, {GenCdRom}"
         },
         {
           "Name": "ContainerID",
-          "Value": "{728d1b08-085d-11f0-a4a8-005056c00008}"
-        }
-      ]
-    },
-    {
-      "RegistryKeys": [
-        {
-          "Name": "HardwareID",
-          "Value": "{USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED\u0026REV0030}, {USB\\ROOT_HUB30\u0026VID8086\u0026PID9DED}, {USB\\ROOT_HUB30}"
-        },
-        {
-          "Name": "ContainerID",
-          "Value": "{728d1b08-085d-11f0-a4a8-005056c00008}"
+          "Value": "{f640c758-e795-5eb9-a60a-7cb7777af2bc}"
         }
       ]
     }

@@ -42,7 +42,7 @@ namespace UsbForensics
             var provider = services.BuildServiceProvider();
             var json = provider.GetRequiredService<RegistryToJson>();
 
-            json.ExtractRegistry(@"System\CurrentControlSet\Enum\USB", "registry.json");
+            json.ExtractRegistry(@"System\CurrentControlSet\Enum\USBStor", "registry_usb_storage.json");
         }
 
         private static void Main(string[] args)
