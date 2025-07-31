@@ -32,6 +32,16 @@ namespace UsbForensics.Services
 
         public string GetValue(string valueName)
         {
+            if (valueName == null)
+            {
+                return "";
+            }
+
+            if (_key.GetValue(valueName) == null)
+            {
+                return "";
+            }
+
             var kind = _key.GetValueKind(valueName);
 
             switch (kind)
